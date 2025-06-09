@@ -63,3 +63,28 @@ docker push sourav7/crud-app:latest
 4. Create Terraform with AWS provider
 
 Test with AWS IP
+
+5. Setup Github Webhook for CICD
+
+# Add Docker Plugin
+Manage Jenkins > Plugins > Available Plugins > Docker > Install > Restart after installation
+# Add Dockerhub credentials
+Go to Jenkins Dashboard → Manage Jenkins → Credentials.
+
+Create a New Pipeline Job:
+
+In Jenkins, click "New Item".
+Enter a name for your job (e.g., crud-app-pipeline).
+Select "Pipeline" and click OK.
+Configure Pipeline from SCM:
+
+Scroll down to the "Pipeline" section.
+For "Definition", select "Pipeline script from SCM".
+For "SCM", select "Git".
+In "Repository URL", enter your Git repository’s URL (e.g., https://github.com/yourusername/crud-app.git).
+If your repo is private, add credentials for Git access.
+"Script Path" should be Jenkinsfile (this is the default; only change if your Jenkinsfile is in a subfolder).
+Save and Build:
+
+Click Save.
+Click Build Now to run your pipeline.
