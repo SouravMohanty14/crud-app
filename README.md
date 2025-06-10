@@ -88,3 +88,5 @@ Save and Build:
 
 Click Save.
 Click Build Now to run your pipeline.
+
+Test Jenkins Trigger
