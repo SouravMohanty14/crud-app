@@ -14,10 +14,10 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
-            steps {
-                // Use SSH or AWS CLI to update the EC2 instance
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         // Use SSH or AWS CLI to update the EC2 instance
+        //     }
+        // }
     }
 }
