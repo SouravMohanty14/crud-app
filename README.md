@@ -89,4 +89,7 @@ Save and Build:
 Click Save.
 Click Build Now to run your pipeline.
 
+- Add plugins for Docker, Docker pipeline, SSH Agent
+- Add credentials for dockerhub, ec2 host(ip address), ec2-ssh-key
+
 Test Jenkins Trigger

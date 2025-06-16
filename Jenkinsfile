@@ -29,17 +29,17 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                sshagent(['ec2-ssh-key']) {
-                    bat """
-                        ssh -o StrictHostKeyChecking=no %EC2_USER%@%EC2_HOST% ^
-                            "sudo docker pull %DOCKER_IMAGE% && ^
-                            sudo docker rm -f crud-app || true && ^
-                            sudo docker run -d --name crud-app -p %APP_PORT%:%APP_PORT% %DOCKER_IMAGE%"
-                    """
-                }
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         sshagent(['ec2-ssh-key']) {
+        //             bat """
+        //                 ssh -o StrictHostKeyChecking=no %EC2_USER%@%EC2_HOST% ^
+        //                     "sudo docker pull %DOCKER_IMAGE% && ^
+        //                     sudo docker rm -f crud-app || true && ^
+        //                     sudo docker run -d --name crud-app -p %APP_PORT%:%APP_PORT% %DOCKER_IMAGE%"
+        //             """
+        //         }
+        //     }
+        // }
     }
 }
